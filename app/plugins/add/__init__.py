@@ -1,5 +1,6 @@
 from app.commands import Command
 import sys
+sys.path.append('../../IS218_HW3_revised')
 from decimal import Decimal, InvalidOperation
 from calculator import Calculator
 
