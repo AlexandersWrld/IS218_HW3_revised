@@ -3,7 +3,7 @@ import sys
 from decimal import Decimal, InvalidOperation
 from calculator import Calculator
 
-class MultiplyCommand(Command):
+class SubtractCommand(Command):
 
     def execute(self):
         number_1 = int(input('Enter your first number: '))
