@@ -10,8 +10,8 @@ from calculator.arithmetic import add, subtract, multiply, divide
 class DivideCommand(Command):
 
     def execute(self):
-        number_1 = int(input('Enter your first number: '))
-        number_2 = int(input('Enter your second number: '))
+        number_1 = int(input('Enter the number you wish to divide: '))
+        number_2 = int(input('Enter the number you want to divide it by: '))
         # number_3 = Calculator.divide(number_1, number_2)
         number_3 = Calculator._perform_operation(number_1, number_2, divide)
         try:

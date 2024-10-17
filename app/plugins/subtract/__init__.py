@@ -3,11 +3,15 @@ import sys
 sys.path.append('../../IS218_HW3_revised')
 from decimal import Decimal, InvalidOperation
 from calculator import Calculator
+from calculator.calculation import Calculation
+from calculator.calchistory import CalculationHistory
+from calculator.arithmetic import add, subtract, multiply, divide
 
 class SubtractCommand(Command):
 
     def execute(self):
-        number_1 = int(input('Enter your first number: '))
-        number_2 = int(input('Enter your second number: '))
-        number_3 = Calculator.subtract(number_1, number_2)       
+        number_1 = int(input('Enter the number you wish to subtract from: '))
+        number_2 = int(input('Enter the number you wish to subtract: '))
+        # number_3 = Calculator.subtract(number_1, number_2) 
+        number_3 = Calculator._perform_operation(number_1, number_2, subtract)       
         print(number_3)
