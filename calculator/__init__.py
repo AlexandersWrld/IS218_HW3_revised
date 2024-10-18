@@ -8,6 +8,10 @@ class Calculator:
         calculation = Calculation.newcalculation(a, b, operation)
         CalculationHistory.addToHistory(calculation)
         return calculation.docalculation()
+    
+    @staticmethod
+    def getHistory(): 
+        return CalculationHistory.retrieveHistory() 
 
     @staticmethod    
     def add(a,b):
@@ -28,3 +32,6 @@ class Calculator:
     def divide(a,b):
         calculation = Calculation(a, b, divide)
         return calculation.docalculation()
+
+
+
