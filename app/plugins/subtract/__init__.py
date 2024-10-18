@@ -10,8 +10,15 @@ from calculator.arithmetic import add, subtract, multiply, divide
 class SubtractCommand(Command):
 
     def execute(self):
-        number_1 = int(input('Enter the number you wish to subtract from: '))
-        number_2 = int(input('Enter the number you wish to subtract: '))
-        # number_3 = Calculator.subtract(number_1, number_2) 
-        number_3 = Calculator._perform_operation(number_1, number_2, subtract)       
-        print(number_3)
+        try:    
+            number_1 = int(input('Enter the number you wish to subtract from: '))
+            number_2 = int(input('Enter the number you wish to subtract: '))
+            ## number_3 = Calculator.add(number_1, number_2)
+            number_3 = Calculator._perform_operation(number_1, number_2, subtract)
+            print(number_3)
+        except ValueError:
+            print("Invalid input. Please enter a valid integer.")
+
+
+
+        
